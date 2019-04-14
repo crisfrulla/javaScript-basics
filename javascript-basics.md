@@ -1,6 +1,6 @@
 # JavaScript Basics
 
-## Class Curriculum
+#### Class Curriculum
 * [Basic](#basic)
 * [Operators](#operators)
 * [Control Flow](#control-flow)
@@ -11,19 +11,24 @@
 
 ---
 
+
 ## Basics
+
 
 ### Variables
 ```javascript
 let name = 'John';
 ```
 
+
 ### Constants
 ```javascript
 const dateOfBirth = '01/01/1900'
 ```
 
+
 ### Primitive Types
+
 
 #### Value Types
 ```javascript
@@ -34,12 +39,15 @@ let firstName = undefined;
 let selectedColor = null;
 ```
 
+
 ### Dynamic Typing
 ```javascript
 typeof varName
 ```
 
+
 ### Reference Types
+
 
 #### Objects
 ```javascript
@@ -54,6 +62,7 @@ person.name = 'Paul'
 person['name'] = 'Luke';
 ```
 
+
 #### Array
 ```javascript
 let selectedColors =['red', 'blue'];
@@ -61,6 +70,7 @@ selectedColors[0];
 selectedColors[2] = 'green';
 selectedColors.length // 3
 ```
+
 
 #### Function
 ```javascript
@@ -79,7 +89,9 @@ square(2);
 
 ---
 
+
 ## Operators
+
 
 ### Arithmetic Operators
 ```javascript
@@ -102,6 +114,7 @@ console.log(x--);
 console.log(--x);
 ```
 
+
 ### Assignment Operators
 ```javascript
 let x = 10;
@@ -111,6 +124,7 @@ x = x + 1; // Same
 
 x += 5; // Increment of 5 
 ```
+
 
 ### Comparison Operators
 ```javascript
@@ -126,6 +140,7 @@ console.log(x === 0); // true
 console.log(x !== 0); // false
 ```
 
+
 ### Equality Operators
 ```javascript
 // Strict Equality (Type + Value)
@@ -138,11 +153,13 @@ console.log('1' == 1); // true
 console.log(true == 1); // true
 ```
 
+
 ### Ternary Operator
 ```javascript
 let points = 110;
 let type = points > 100 ? 'gold' : 'silver'; // gold
 ```
+
 
 ### Logical Operators
 ```javascript
@@ -159,6 +176,7 @@ let eligibleForLoad = highIncome || goodCreditScore // true
 // NOT (!)
 let applicationRefused = !elegibleForLoan; // false
 ```
+
 
 ### Logical Operators with Non-booleans
 ```javascript
@@ -177,6 +195,7 @@ let defaultColor = 'blue';
 let currentColor = userColor || defaultColor;
 ```
 
+
 ### Bitwise Operators
 ```javascript
 // 1 = 00000001
@@ -193,6 +212,7 @@ console.log(1 & 2); // Bitwise AND
 // 00000111
 ```
 
+
 ### Operators Precedence
 ```javascript
 let x = (2 + 3) * 4;
@@ -200,7 +220,9 @@ let x = (2 + 3) * 4;
 
 ---
 
+
 ## Control Flow
+
 
 ### If...else
 ```javascript
@@ -213,6 +235,7 @@ else if (hour >= 12 && hour < 18)
 else
   console.log('Good Night');
 ```
+
 
 ### Switch...case
 ```javascript
@@ -231,7 +254,9 @@ switch (role) {
 }
 ```
 
+
 ### Loops
+
 
 #### For
 ```javascript
@@ -239,6 +264,7 @@ for (let i = 0; i < 5; i++ ) {
   console.log('Hello World');
 }
 ```
+
 
 #### While
 ```javascript
@@ -249,6 +275,7 @@ while (i <= 5) {
 }
 ```
 
+
 #### Do...while
 ```javascript
 let i = 0;
@@ -257,6 +284,7 @@ do {
   i++
 } while (i <= 5);
 ```
+
 
 #### For...in
 ```javascript
@@ -273,6 +301,7 @@ for (let index in colors)
   console.log(index, colors[index])
 ```
 
+
 #### For...of
 ```javascript
 // Use for iterate over an array
@@ -283,12 +312,13 @@ for (let color of colors)
 
 ---
 
+
 ## Objects
+
 
 ### Basic Object
 ```javascript
 // Object-oriented Programming (OOP)
-
 let circle = {
   radius: 1,
   location: {
@@ -303,6 +333,7 @@ let circle = {
 
 circle.draw(); // Method
 ```
+
 
 ### Factory Functions
 ```javascript
@@ -332,6 +363,7 @@ let circle1 = createCircle(10);
 let circle2 = createCircle(20);
 ```
 
+
 ### Constructor Functions
 ```javascript
 // Pascal Notation: OneTwoThree
@@ -346,6 +378,7 @@ function Circle(radius) {
 let circle = new Circle(10);
 ```
 
+
 ### Dynamic Nature of Objects
 ```javascript
 let circle = {
@@ -359,6 +392,7 @@ delete circle.color;
 delete circle.draw;
 ```
 
+
 ### Constructor Property
 ```javascript
 new Object(); // let x = {};
@@ -366,6 +400,7 @@ new String(); // '', "", ``
 new Boolean(); // true, false
 new Number(); // 1, 2, 3, ...
 ```
+
 
 ### Value vs Reference Types
 ```javascript
@@ -388,6 +423,7 @@ function increase(obj) {
 increase(obj);
 ```
 
+
 ### Enumerating Properties of an Object
 ```javascript
 let circle = {
@@ -403,6 +439,7 @@ for (let key in circle)
 for (let key of Object.key(circle))
   console.log(key);
 ```
+
 
 ### Cloning an Object
 ```javascript
@@ -425,6 +462,7 @@ let circle = {
 let another = { ...circle };
 ```
 
+
 ### Math Object
 ```javascript
 Math.random()
@@ -435,6 +473,7 @@ Math.max(1,2,3,4,5)
 
 Math.min(1,2,3,4,5)
 ```
+
 
 ### String Object
 ```javascript
@@ -451,6 +490,7 @@ message.indexOf('my') // 8
 message.replace('first', 'second') // This is my second message
 message.trim()
 ```
+
 
 ### Template Literals
 ```javascript
@@ -472,6 +512,7 @@ let message = `
 `;
 ```
 
+
 ### Date Object
 ```javascript
 let now = new Date();
@@ -481,7 +522,9 @@ let date2 = new Date(2018, 4, 11, 9, 30);
 
 ---
 
+
 ## Arrays
+
 
 ### Adding Elements
 ```javascript
@@ -497,6 +540,7 @@ numbers.unshift(1,2);
 numbers.spice(2, 0, 'a', 'b');
 ```
 
+
 ### Finding Elements (Primitives)
 ```javascript
 const numbers = [1, 2, 3, 4];
@@ -505,6 +549,7 @@ number.indexOf();
 number.lastIndexOf(1);
 numbers.includes(1);
 ```
+
 
 ### Finding Elements (Reference Types)
 ```javascript
@@ -519,6 +564,7 @@ courses.find(function(course) {
 });
 ```
 
+
 ### Arrow Functions
 ```javascript
 // Callback function
@@ -529,6 +575,7 @@ let course = courses.find(function(course) {
 // Arrow function
 let course = courses.find(course => course.name === 'a');
 ```
+
 
 ### Removing Elements
 ```javascript
@@ -543,6 +590,7 @@ const first = numbers.shift();
 // Middle
 numbers.spice(2, 1);
 ```
+
 
 ### Emptying an Array
 ```javascript
@@ -562,6 +610,7 @@ while (numbers.length > 0)
   numner.pop();
 ```
 
+
 ### Combining and Slicing Arrays
 ```javascript
 const first = [1, 2, 3];
@@ -571,6 +620,7 @@ const combined = first.concat(second);
 
 const slice = combined.slice(2, 4);
 ```
+
 
 ### The Spread Operator
 ```javascript
@@ -582,6 +632,7 @@ const combined = [...first, 'a', ...second, 'b'];
 const copy = [...combined];
 ```
 
+
 ### Iterating an Array
 ```javascript
 const numbers = [1, 2, 3];
@@ -589,12 +640,13 @@ const numbers = [1, 2, 3];
 numbers.forEach((number, index) => console.log(number));
 ```
 
-### Joining Arrays
 
+### Joining Arrays
 ```javascript
 const numbers = [1, 2, 3];
 const joined = numbers.join('-');
 ```
+
 
 ### Sorting Arrays
 ```javascript
@@ -613,6 +665,7 @@ numbers.sort(function(a,b) {
 });
 ```
 
+
 ### Testing the Elements of an Array
 ```javascript
 const numbers = [1, 2, 3];
@@ -626,11 +679,13 @@ const atLeastOnePositive = numbers.some(function(value) {
 });
 ```
 
+
 ### Filtering an Array
 ```javascript
 const numbers = [1, 2, -5, 3];
 const filtered = numbers.filter(n => n >= 0);
 ```
+
 
 ### Mapping an Array
 ```javascript
@@ -642,6 +697,7 @@ const items = filtered.map(n => '<li>' + n + '</li>');
 
 const html = '<ul>' + items.join('') + '</ul>';
 ```
+
 
 ### Reducing an Array
 ```javascript
@@ -658,7 +714,9 @@ let sum = numbers.reduce((accumulator, currentValue) => {
 
 ---
 
+
 ## Functions
+
 
 ### Function Declarations vs Expressions
 ```javascript
@@ -678,6 +736,7 @@ run();
 move();
 ```
 
+
 ### Hoisting
 ```javascript
 // Javascript engine moves all Function Declarations at the top so you can call function that are defined before their definition.
@@ -688,6 +747,7 @@ function walk() {
   console.log('walk')
 }
 ```
+
 
 ### Arguments
 ```javascript
@@ -704,6 +764,7 @@ function sum() {
 }
 console.log(sum(1, 2, 3, 4, 10));
 ```
+
 
 ### The Rest Operator
 ```javascript
@@ -723,6 +784,7 @@ function sum(discount, ...prices) {
 console.log(sum(0.1, 2, 3, 4, 10));
 ```
 
+
 ### Default Parameters
 ```javascript
 function interest(principal, rate = 3.5, years = 5) {
@@ -731,6 +793,7 @@ function interest(principal, rate = 3.5, years = 5) {
 
 console.log(interest(10000, 3.5, 5));
 ```
+
 
 ### Getters and Setters
 ```javascript
@@ -751,6 +814,7 @@ person.fullName = 'John Doe';
 
 console.log(person.fullName);
 ```
+
 
 ### Try and Catch
 ```javascript
@@ -780,6 +844,7 @@ catch (e) {
 console.log(person);
 ```
 
+
 ### Local vs Global Scope
 ```javascript
 const color = 'red';
@@ -797,6 +862,7 @@ function stop( {
 start();
 ```
 
+
 ### Let vs Var
 ```javascript
 function start() {
@@ -813,6 +879,7 @@ function start() {
   console.log(i);
 }
 ```
+
 
 ### The this Keyword
 ```javascript
@@ -841,6 +908,7 @@ const video = {
 video.showTags();
 ```
 
+
 ### Changing this
 ```javascript
 function playVideo(a, b) {
@@ -866,7 +934,9 @@ video.showTags();
 
 ---
 
+
 ## ES6
+
 
 ### Objects
 ```javascript
@@ -877,6 +947,7 @@ const person = {
 }
 person.talk();
 ```
+
 
 ### Binding this
 ```javascript
@@ -892,6 +963,7 @@ person.talk();
 const walk = person.walk.bind(person);
 walk();
 ```
+
 
 ### Arrow Functions
 ```javascript
@@ -914,11 +986,13 @@ const jobs = [
 const activeJob = job.filter((job) => job.isActive);
 ```
 
+
 ### Array.map Method
 ```javascript
 const colors = ['red', 'blue', 'green'];
 const items = color.map((color) => `<li>${color}</li>`);
 ```
+
 
 ### Object Destructuring
 ```javascript
@@ -930,6 +1004,7 @@ const address = {
 
 const { street: st, city, country } = address;
 ```
+
 
 ### Spread Operator
 ```javascript
@@ -949,6 +1024,7 @@ const combined = {...first, ...second, location: 'Sydney'};
 
 const clone = {...combined};
 ```
+
 
 ### Classes
 ```javascript
@@ -971,6 +1047,7 @@ class Person {
 
 const person = new Person('Paul');
 ```
+
 
 ### Inheritance
 ```javascript
@@ -997,6 +1074,7 @@ class Teacher extends Person {
 
 const teacher = new Teacher('Paul', 'Art');
 ```
+
 
 ### Modules
 ```javascript
@@ -1035,6 +1113,7 @@ teacher.teach();
 //
 ```
 
+
 ### Named and Default Exports
 ```javascript
 // file3.js
@@ -1060,13 +1139,6 @@ export default class Teacher extends Person {
   }
 }
 //
-
 ```
 
 ---
-
-
-### 
-
-```javascript
-```
